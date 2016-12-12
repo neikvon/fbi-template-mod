@@ -1,5 +1,5 @@
 module.exports = {
-  template: 'mod',
+  // template: 'mod',
   templateDescription: '(该模版仅兼容FBI v3.0.0+) FBI 模版，用于构建js模块、node服务，兼容node v6+',
   npm: {
     alias: 'npm',
@@ -38,9 +38,9 @@ module.exports = {
      */
     moduleId: 'myModuleId',
     banner: `
-require('source-map-support').install();
+require('source-map-support').install()
     `,
     outro: '// this is outro',
     footer: '// this is footer'
-  }
+  },
 }
