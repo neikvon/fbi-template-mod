@@ -13,6 +13,26 @@
 1. 编译速度数倍提升
 
 ## 配置
+`package.json`
+
+```
+"fbi": {
+  "template": "mod",
+  "PATHS": {
+    "local": {
+      "tasks": "build/",
+      "config": "build/config.js"
+    }
+  }
+}
+```
+
+```
+"fbi": {
+  "template": "mod"
+}
+```
+
 ```js
 // fbi/config.js => rollup
 

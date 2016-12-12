@@ -13,7 +13,7 @@ module.exports = {
   },
   rules: {
     semi: [2, 'never'], // 行尾不要使用分号
-    'indent': ['error', 2],
+    'indent': ['error', 2, { "SwitchCase": 1 }], // switch 语句缩进 2 个空格
     'linebreak-style': ['error', 'unix'],
     'quotes': ['error', 'single'],
     'arrow-parens': [2, 'as-needed'],

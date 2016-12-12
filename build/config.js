@@ -3,7 +3,7 @@ module.exports = {
   templateDescription: '(该模版仅兼容FBI v3.0.0+) FBI 模版，用于构建js模块、node服务，兼容node v6+',
   npm: {
     alias: 'npm',
-    options: '', // '--registry=https://registry.npm.taobao.org'
+    options: '--registry=https://registry.npm.taobao.org'
   },
   alias: {
     b: 'build',
