@@ -1,32 +1,12 @@
-const copy = require('./helpers/copy')(require, ctx)
-const clean = require('./helpers/clean')(require, ctx)
-const watch = require('./helpers/watch')(require, ctx)
-const complier = require('./helpers/complier')(require, ctx)
-
-clean()
-complier()
-copy()
-watch()
+const copy = require('./helpers/copy')
+const clean = require('./helpers/clean')
+const watch = require('./helpers/watch')
+const complier = require('./helpers/complier')
+const nodemon = require('nodemon')
 
 // start server
 function startServer () {
-  const nodemon = require('nodemon')
-  nodemon({
-    script: ctx.options.dist + 'index.js',
-    ext: 'js json',
-    watch: false, // [ ctx.options.dist ],
-    verbose: true, // for debug purpose only
-    ignore: [
-      '.git',
-      'node_modules',
-      'src',
-      'test',
-      'fbi'
-    ],
-    env: {
-      'NODE_ENV': 'development'
-    }
-  })
+  nodemon(`${ctx.options.mainFile} --config fbi/config/nodemon.json`)
 
   nodemon
     .on('start', () => {
@@ -43,4 +23,8 @@ function startServer () {
     })
 }
 
+clean()
+complier()
+copy()
+watch()
 startServer()

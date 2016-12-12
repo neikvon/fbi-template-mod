@@ -1,16 +1,19 @@
 module.exports = {
   template: 'mod',
-  templateDescription: '兼容node v6+的 js模块、node服务',
+  templateDescription: '(该模版仅兼容FBI v3.0.0+) FBI 模版，用于构建js模块、node服务，兼容node v6+',
   npm: {
-    alias: 'tnpm',
+    alias: 'npm',
     options: '', // '--registry=https://registry.npm.taobao.org'
   },
   alias: {
     b: 'build',
-    w: 'watch',
     s: 'serve'
   },
   dist: './dst/', // 生成目录路径
+  // watch延迟时间(单位：秒)
+  watchDelay: 0,
+  // 用做nodemon入口文件
+  mainFile: 'dst/index.js',
   rollup: {
     /**
      * 指定入口文件

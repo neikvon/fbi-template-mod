@@ -1,5 +1,7 @@
 # Template for js module and node app
 
+**This branch only works with FBI v3.0.0+**
+
 > 模版主要定位：兼容node v6+的 **npm模块**、**node应用**
 >
 > 也可以作为浏览器端的js模块模版(要么不要使用太新的特性，要么详细配置`/fbi/config/buble.config.js`转换规则)

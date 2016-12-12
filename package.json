@@ -1,8 +1,8 @@
 {
   "name": "mod",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "author": "fbi",
-  "description": "兼容node v6+的 **js模块**、**node服务**",
+  "description": "(该模版仅兼容FBI v3.0.0+) FBI 模版，用于构建js模块、node服务，兼容node v6+",
   "engines": {
     "node": ">=6.9.1",
     "npm": ">= 3.10.0"

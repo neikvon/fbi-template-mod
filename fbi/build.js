@@ -1,6 +1,6 @@
-const copy = require('./helpers/copy')(require, ctx)
-const clean = require('./helpers/clean')(require, ctx)
-const complier = require('./helpers/complier')(require, ctx)
+const copy = require('./helpers/copy')
+const clean = require('./helpers/clean')
+const complier = require('./helpers/complier')
 
 process.env.NODE_ENV = 'production'
 clean()
